@@ -33,3 +33,8 @@ resource "civo_kubernetes_cluster" "example" {
     ]
   }
 }
+
+resource "flux_bootstrap_git" "example" {
+  embedded_manifests = true
+  path               = "flux"
+}
